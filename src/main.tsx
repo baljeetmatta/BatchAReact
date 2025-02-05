@@ -1,22 +1,26 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+//import './index.css'
+import Controls from './Controls'
+import GreetClass from './GreetClass'
+// import Greet from './Greet.tsx';
+// import Button from './Button.tsx';
+// // function clickHandlerSend(e:React.MouseEvent){
+// //   let target=e.target  as HTMLButtonElement
+// //   alert("Clicked button " +target.innerText)
+// // }
+// function clickHandlerClick(e:React.MouseEvent<HTMLButtonElement>){
 
-import Greet from './Greet.tsx';
-import Button from './Button.tsx';
-function clickHandlerSend(){
-  alert("Clicked Send button")
-}
-function clickHandlerClick(){
-  alert("Clicked Click button")
-}
-type objectType={
-  name:string,
-  age:number
-}
-let jsondata:objectType={name:"First",age:20};
+//   let target=e.target  as HTMLButtonElement
+//   alert("Clicked button " +target.innerText)
+// }
+// type objectType={
+//   name:string,
+//   age:number
+// }
+// let jsondata:objectType={name:"First",age:20};
 
-import Test from './Test.tsx';
+// import Test from './Test.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* <Greet name="CodeQuotient" years={12}/>
@@ -28,10 +32,16 @@ createRoot(document.getElementById('root')!).render(
 
    <Button value="Click" click={clickHandlerClick}/>
      */}
+     {/* <Button value="Click" click={clickHandlerClick}/>
+     <Button value="Send" click={clickHandlerClick}/>
+
      <Greet name="CodeQuotient">
       
       <Test json={jsondata}/>
-     </Greet>
+     </Greet> */}
+{/* <Controls/> */}
+
+<GreetClass name="CodeQuotient"/>
 
 
   </StrictMode>,

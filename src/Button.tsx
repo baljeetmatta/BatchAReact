@@ -17,7 +17,7 @@ import './App.css'
 // }
 type ButtonProps={
     value:string,
-    click:Function
+    click:(e:React.MouseEvent<HTMLButtonElement>)=>void;
 }
 function Button(props:ButtonProps)
 {
