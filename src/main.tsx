@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 //import './index.css'
 import Controls from './Controls'
 import GreetClass from './GreetClass'
+import Login from './Login'
 // import Greet from './Greet.tsx';
 // import Button from './Button.tsx';
 // // function clickHandlerSend(e:React.MouseEvent){
@@ -40,8 +41,9 @@ createRoot(document.getElementById('root')!).render(
       <Test json={jsondata}/>
      </Greet> */}
 {/* <Controls/> */}
-
-<GreetClass name="CodeQuotient"/>
+{/* 
+<GreetClass name="CodeQuotient"/> */}
+<Login/>
 
 
   </StrictMode>,
