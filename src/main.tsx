@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-//import './index.css'
+import './index.css'
 import Controls from './Controls'
 import GreetClass from './GreetClass'
 import Login from './Login'
+import Banner from './Banner'
 // import Greet from './Greet.tsx';
 // import Button from './Button.tsx';
 // // function clickHandlerSend(e:React.MouseEvent){
@@ -43,7 +44,8 @@ createRoot(document.getElementById('root')!).render(
 {/* <Controls/> */}
 {/* 
 <GreetClass name="CodeQuotient"/> */}
-<Login/>
+{/* <Login/> */}
+<Banner/>
 
 
   </StrictMode>,

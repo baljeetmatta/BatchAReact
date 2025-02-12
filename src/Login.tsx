@@ -55,3 +55,7 @@ const logoutHandler=()=>{
 // //     )
 // }
 export default Login;
+
+//npm install tailwindcss@3
+//npx tailwindsss@3 init
+//npx tailwindcss@3 -i ./input.css -o ./output.css
