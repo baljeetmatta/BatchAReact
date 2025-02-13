@@ -1,5 +1,5 @@
 
-import './App.css'
+//import './App.css'
 import test from './data.json';
 
 function Test(){

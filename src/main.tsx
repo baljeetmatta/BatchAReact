@@ -5,6 +5,8 @@ import Controls from './Controls'
 import GreetClass from './GreetClass'
 import Login from './Login'
 import Banner from './Banner'
+import UI from './UI'
+import Parent from './Parent'
 // import Greet from './Greet.tsx';
 // import Button from './Button.tsx';
 // // function clickHandlerSend(e:React.MouseEvent){
@@ -45,7 +47,9 @@ createRoot(document.getElementById('root')!).render(
 {/* 
 <GreetClass name="CodeQuotient"/> */}
 {/* <Login/> */}
-<Banner/>
+{/* <Banner/> */}
+{/* <UI/> */}
+<Parent/>
 
 
   </StrictMode>,
