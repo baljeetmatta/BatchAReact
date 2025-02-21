@@ -5,17 +5,17 @@ const Timer=()=>{
 useEffect(()=>{
    let interval= setInterval(test,1000);
    console.log(interval);
-   return ()=>clearInterval(interval)
+   //return ()=>clearInterval(interval)
 
    
 
     //for every render
-},[count])//list of variables
+})//list of variables
   //  
 
     function test(){
         setCounter(count+1);
-
+console.log(count);
         //data++;
         //console.log(data);
 

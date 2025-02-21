@@ -10,6 +10,7 @@ import Parent from './Parent'
 import State from './State'
 import Timer from './Timer'
 import CTimer from './CTimer'
+import UserDashboard from './components/UserDashboard'
 // import Greet from './Greet.tsx';
 // import Button from './Button.tsx';
 // // function clickHandlerSend(e:React.MouseEvent){
@@ -53,7 +54,8 @@ createRoot(document.getElementById('root')!).render(
 {/* <Banner/> */}
 {/* <UI/> */}
 {/* <State name="Code"/> */}
-<CTimer/>
+<UserDashboard/>
+
 
 
   </StrictMode>,
