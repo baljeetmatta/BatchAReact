@@ -8,14 +8,15 @@ export interface User{
 const UserDashboard=()=>{
     const [user,setUser]=useState<User>({
         name:"State Name",
-        isSubscribed:true
+        isSubscribed:true,
+        
     });
     return (
         <>
         <UserContext.Provider value={user}>
         {/* <Dashboard user={user}/> */}
         <Dashboard/>
-        
+
         </UserContext.Provider>
         </>
     )

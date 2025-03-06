@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "title": "First Job",
+      "description": "Job Description",
+      "package": "18L-20L"
+    },
+    {
+      "id": 2,
+      "title": "Software Engineer",
+      "description": "Develop and maintain software solutions.",
+      "package": "12L-15L"
+    },
+    {
+      "id": 3,
+      "title": "Project Manager",
+      "description": "Lead and manage software development projects.",
+      "package": "22L-25L"
+    },
+    {
+      "id": 4,
+      "title": "Data Scientist",
+      "description": "Analyze and interpret complex data.",
+      "package": "20L-24L"
+    },
+    {
+      "id": 5,
+      "title": "Business Analyst",
+      "description": "Gather and analyze business requirements.",
+      "package": "15L-18L"
+    }
+  ]
+  
