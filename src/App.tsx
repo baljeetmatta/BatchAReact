@@ -2,7 +2,17 @@
 // // //import './App.css'
 // // // import test from './data.json';
 
-import Posts from "./components/Posts";
+import { Outlet, Route, Routes } from "react-router-dom";
+import Login from "./Login";
+import LoginPage from "./LoginPage";
+import { useState } from "react";
+import { LoginContext } from "./components/LoginContext";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { NavLink } from "react-router-dom";
+import PrivateLogin from "./components/PrivateLogin";
+
+//import Posts from "./components/Posts";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Home from "./components/Home";
@@ -130,12 +140,41 @@ import Posts from "./components/Posts";
 // }
 // export default App;
 
-function App(){
+// function App(){
+
+//   return (
+//     <>
+//     <Posts/>
+//     </>
+//   )
+// }
+// export default App;
+
+function App()
+{
+  const [name,setName]=useState<string|undefined>();
 
   return (
-    <>
-    <Posts/>
-    </>
+      <>
+      <ul className="flex gap-4">
+        <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+
+      </ul>
+      
+     <div> UserName: {name}</div>
+      <LoginContext.Provider value={{name,setName}}>
+        <Routes>
+          <Route path="/login" element={<LoginPage/>}></Route>
+          <Route path="/" element={<PrivateLogin><Outlet/></PrivateLogin>}>
+              <Route path="about" element={<About/>}/>
+              <Route path="contact" element={<Contact/>}/>
+
+          </Route>
+        </Routes>
+        </LoginContext.Provider>
+      </>
   )
 }
 export default App;

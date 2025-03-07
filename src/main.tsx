@@ -57,8 +57,9 @@ createRoot(document.getElementById('root')!).render(
 {/* <UI/> */}
 {/* <State name="Code"/> */}
 {/* <UserDashboard/> */}
-
+<BrowserRouter>
 <App/>
+</BrowserRouter>
 
 
 
