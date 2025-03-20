@@ -93,9 +93,68 @@
 //     return number*power;
 // }
 // console.log(getNumber(4,2));
-const minAge=18
-function isEligible(age,minAge)
+// const minAge=18
+// function isEligible(age,minAge)
+// {
+//     return age>minAge;
+// }
+// console.log(isEligible(20,18));
+///String immutable
+// let str="Data";
+// const str1=str.toLowerCase();
+// console.log(str1, str);
+
+//const person ={"name":"Testname",age:10};
+// const data=person; //shallow Copy
+// data.name="Change";
+// console.log(data,person)
+//const data={...person,"name":"Change"}//deep copy
+//data.name="Change";
+//console.log(data,person);
+//console.log(data);
+
+// import {Map} from "immutable"
+// const person=Map({
+//     name:"Code",
+//     years:10,
+//     address:{
+//         city:"ABC"
+//     }
+// });
+//API for MAP - set of functions
+//console.log(person.get("name"));
+//console.log(person.toJS())
+//person=person.set("name","Test");
+//console.log(person.toJS());
+
+//const data={...person};
+// data.address.city="New";
+// data.name="Change";
+// console.log(data,person);
+
+// const data={
+//     ...person,
+//     address:{
+//         ...person.address
+//     }
+// }
+// data.address.city="A";
+// console.log(data,person);
+//const data=
+import { Map } from "immutable";
+//let book=Map({"title":"First Book"});
+let book={"title":"First Book"};
+import { produce } from "immer";
+function publish(b)
 {
-    return age>minAge;
+    //b.isPublished=true;
+  // const obj= b.set("isPublished",true);
+   //return obj;
+  const obj= produce(b,draftbook=>{
+        draftbook.isPublished=true;
+        draftbook.done=false;
+   })
+return obj;
 }
-console.log(isEligible(20,18));
+const newbook=publish(book);
+console.log(newbook,book)
