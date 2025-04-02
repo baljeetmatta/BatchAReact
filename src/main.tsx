@@ -32,38 +32,11 @@ import { BrowserRouter } from 'react-router-dom'
 
 // import Test from './Test.tsx';
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    {/* <Greet name="CodeQuotient" years={12}/>
-    <Greet name="Chitkara"/> */}
-    {/* <Button/>
-
-    <Button/> */}
-    {/* <Button value="Send" click={clickHandlerSend}/>
-
-   <Button value="Click" click={clickHandlerClick}/>
-     */}
-     {/* <Button value="Click" click={clickHandlerClick}/>
-     <Button value="Send" click={clickHandlerClick}/>
-
-     <Greet name="CodeQuotient">
-      
-      <Test json={jsondata}/>
-     </Greet> */}
-{/* <Controls/> */}
-{/* 
-<GreetClass name="CodeQuotient"/> */}
-{/* <Login/> */}
-{/* <Banner/> */}
-{/* <UI/> */}
-{/* <State name="Code"/> */}
-{/* <UserDashboard/> */}
+ 
 <BrowserRouter>
 <App/>
 </BrowserRouter>
 
 
 
-
-
-  </StrictMode>,
 )

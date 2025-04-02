@@ -5,7 +5,7 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 //import Login from "./Login";
 import LoginPage from "./LoginPage";
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { LoginContext } from "./components/LoginContext";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -14,6 +14,9 @@ import PrivateLogin from "./components/PrivateLogin";
 import BugApp from "./components/BugApp";
 import { PersistGate } from "redux-persist/integration/react";
 import { pstore } from "./components/BugStore";
+//import ChatApp from "./components/ChatApp";
+const ChatApp=lazy(()=>import("./components/ChatApp"));
+
 
 //import Posts from "./components/Posts";
 
@@ -165,6 +168,7 @@ function App()
         <li><NavLink to="/contact">Contact</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/bugs">Bugs</NavLink></li>
+        <li><NavLink to="/chats">Chats</NavLink></li>
 
       </ul>
       
@@ -173,6 +177,7 @@ function App()
         <Routes>
           <Route path="/login" element={<LoginPage/>}></Route>
           <Route path="/bugs" element={<BugApp/>}></Route>
+          <Route path="/chats" element={<ChatApp/>}></Route>
           <Route path="/" element={<PrivateLogin><Outlet/></PrivateLogin>}>
               <Route path="about" element={<About/>}/>
               <Route path="contact" element={<Contact/>}/>
